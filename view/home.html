@@ -1,0 +1,29 @@
+<div class="main">
+  <div class="container">
+
+    <h2>Notas</h2>
+
+    <div class="row">
+      <ul>
+      <div class="item col-md-4" ng-repeat="item in items">
+        <li>
+        <input type="checkbox" ng-checked="exists(item, selected)"
+                       ng-click="toggle(item, selected)"/>
+        <a href="#/notes/{{$index}}">
+        <img class="icon notedetm" ng-src="http://shmector.com/_ph/6/432545951.png">
+       <div class="info">
+        <p>{{item.title}}</p>
+        <p>{{item.text}}</p>
+
+        </div>
+        <p >{{item.date | date}}</p>
+        </a>
+        </li>
+      </div>
+      </ul>
+          <div class="container" id="popupContainer" ng-cloak>
+          <p class="deleteTask" ng-click="deleteTasks($event)">Borrar</p>
+          </div>
+    </div>
+  </div>
+</div>

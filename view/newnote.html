@@ -1,0 +1,33 @@
+<md-bottom-sheet  class="md-list md-has-header" ng-cloak>
+ <md-subheader>Nueva tarea</md-subheader>
+  <div class="note">
+    <div class="container" id="popupContainer" ng-cloak>
+      <form name="itemForm">
+        
+        <div layout layout-sm="column">
+          <md-input-container flex>
+            <label>Título </label>
+            <input type="text" ng-model="title" required>
+          </md-input-container>
+          <md-datepicker  type="text" ng-model="mydate" md-placeholder="Enter date" required></md-datepicker>
+        </div>    
+      
+        <md-input-container type="text" class="md-block" required>
+          <label>Texto de la nota</label>
+          <textarea ng-model="text" columns="1" md-maxlength="150" rows="5"></textarea>
+        </md-input-container>
+  
+        <p class="taskEdit" ng-click="addItem()"><i class="fa fa-plus icon"></i>Crear tarea</p>
+        
+                    <div ng-if="test">
+                <br />
+                <b layout="row" layout-align="center center" class="md-padding">
+                  {{test}}
+                </b>
+              </div>
+              
+        </form>
+        
+    </div>
+  </div>
+</md-bottom-sheet>

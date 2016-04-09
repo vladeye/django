@@ -1,0 +1,30 @@
+<div class="note">
+  <div class="container" id="popupContainer" ng-cloak>
+    <form name="itemForm">
+      
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>Título </label>
+          <input ng-model="title">
+        </md-input-container>
+        <md-datepicker ng-model="mydate" md-placeholder="Enter date"></md-datepicker>
+      </div>    
+    
+      <md-input-container class="md-block" >
+        <label>Texto de la nota</label>
+        <textarea ng-model="text" columns="1" md-maxlength="150" rows="5"></textarea>
+      </md-input-container>
+
+      <p class="taskEdit" ng-click="editItem($event)"><i class="fa fa-plus icon"></i>Editar tarea</p>
+      <a  href="#/"><p class="taskEdit">&lt;&lt;Cancelar</p></a>
+                  <div ng-if="test">
+              <br />
+              <b layout="row" layout-align="center center" class="md-padding">
+                {{test}}
+              </b>
+            </div>
+            
+      </form>
+      
+  </div>
+</div>

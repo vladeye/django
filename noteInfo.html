@@ -1,0 +1,10 @@
+<div >
+  <a href="#/notes/{{id}}">
+  <p class="menulst" ng-click="action($event,$index)">{{ menu.title }}</p>
+  </a>
+  <div ng-hide = "menu.isHidden">
+  <p class="menulstcom" layout-padding="" >
+  {{menu.text.substring(0,20)}}...
+  </p>
+  </div>
+</div>
